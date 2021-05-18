@@ -1,0 +1,54 @@
+
+Literate Programming:
+Combination of coding and documentation. Literate Programming was introduced by Donald Knuth in which a program is given as explanation of the program logic in a natural language such as English along with some snippets of macros and traditional source code.
+
+Python
+Python was invented by Guido Van Rossum in 1989, and relased the python in 1991
+Python is an interpreted, high-level, general purpose programming language
+Platforms to run Python
+IDLE, PyCharm, Anaconda, PyScripter etc
+
+Anaconda
+Anaconda is a platform which provides various applications to run various programming languages, in that we are using jupyter Notebook to run python.
+
+Why we should use Anaconda
+Anaconda contains popular python libraries which are used for Data Science and Machine Learning.
+
+Shortcuts
+M: Markdown
+Y: code
+space: to scroll down
+shift+space : to scroll up
+shift+enter : to run the cell
+A: to insert a cell above
+B: to insert a cell below
+
+Markdown syntax
+Heading
+Heading1
+Heading2
+Heading3
+Heading4
+Heading5
+Heading6
+text line1
+text line2
+text line3
+bold text
+Italic text
+Bold and Italic
+text
+
+text sublist
+textlist1
+textlist2
+unordered list
+
+list1
+list2
+list3
+text
+ordered list
+list1
+list2
+list3
