@@ -1,0 +1,215 @@
+In [1]:
+# print statement to display a message
+print("welcome to python programming")
+welcome to python programming
+In [2]:
+# Comments
+# Single line comments
+"""Multi line comments"""
+Out[2]:
+'Multi line comments'
+Variable 
+Variables are used to store the data/Value
+In [8]:
+n1 = 10                  # Single Variable assignment
+a = b = c = 20           # Multiple variable assignment
+x,y,z = 1,2,3            # Multiple variable assignment with values
+print(x,y,z)
+print(a)
+print(n1)
+1 2 3
+20
+10
+In [12]:
+i = 123
+i
+Out[12]:
+123
+In [13]:
+i = 456
+i
+Out[13]:
+456
+In [15]:
+s1 = "Python"
+f = 45.67
+n = 800
+
+print(s1)
+print(f)
+print(n)
+Python
+45.67
+800
+In [16]:
+print(s1,f,n)
+Python 45.67 800
+In [17]:
+s1 = "string1"
+s2 = "string2"
+print("two strings are "+s1+ "and"+s2)
+two strings are string1andstring2
+In [18]:
+n1 = 56
+n2 = 89
+print("first integer value as",n1,"and second integer value",n2)
+first integer value as 56 and second integer value 89
+In [21]:
+n = int(input("enter a value"))
+print(type(n))
+print(n)
+enter a value258
+<class 'int'>
+258
+In [23]:
+f = float(input("enter a value"))
+f
+enter a value25
+Out[23]:
+25.0
+In [25]:
+s = input()
+s
+python
+Out[25]:
+'python'
+Operators
+Arithmetic Operators
++,-,*,/,%,//,**
+Assignment Operators
++=,-=,*=,/=,%=,//=,**=,=
+Logical Operators
+and, or, not
+Bitwise Operators
+&,|,^,~,>>,<<
+Comparision Operators
+<,>,<=,>=,==,===,!=
+Identity Operators
+is, is not
+Membership operators
+in, not in
+In [2]:
+a = 5
+b = 2
+a//b  # integer division
+Out[2]:
+2
+In [3]:
+a**b # a power b-- a ^ b
+Out[3]:
+25
+In [4]:
+a%b
+Out[4]:
+1
+In [5]:
+print("addition",a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print("mod divison",a%b)
+print(a//b)
+print(a**b)
+addition 7
+3
+10
+2.5
+mod divison 1
+2
+25
+In [6]:
+h = 20
+h += 4   # h = h+4
+print(h)
+24
+In [9]:
+3 < 5 and 7 < 10
+Out[9]:
+True
+In [10]:
+2>9 and 8<11
+Out[10]:
+False
+In [11]:
+4 <= 5 or 7 ==8
+Out[11]:
+True
+In [12]:
+not (4 <= 5 or 7 ==8)
+Out[12]:
+False
+In [13]:
+n1 = 3  # 0011
+n2 = 5  # 0101
+n1 & n2 # 0001
+Out[13]:
+1
+In [14]:
+n1 | n2 # 0111
+Out[14]:
+7
+In [15]:
+n1 ^ n2 # 0110
+Out[15]:
+6
+In [18]:
+~n1   #(-(n1+1))
+Out[18]:
+-4
+In [20]:
+a = 2
+b = 5 
+a<<b # 2<<5 --> 0010<<5--> 100 0000
+Out[20]:
+64
+In [35]:
+10 << 2 # 1010<<2 --> 101000
+Out[35]:
+40
+In [23]:
+10 >> 2 # 1010>>2 -- 0010
+Out[23]:
+2
+In [25]:
+a = 2
+a is 2
+Out[25]:
+True
+In [26]:
+a is not 5
+Out[26]:
+True
+In [27]:
+a is not 2
+Out[27]:
+False
+In [28]:
+x = 8
+y = 9
+z = 8
+print(x is y)
+print(x is z)
+print( y is not z)
+False
+True
+True
+In [29]:
+k = [1,2,3,4]
+4 in k
+Out[29]:
+True
+In [30]:
+10 in k
+Out[30]:
+False
+In [31]:
+2 not in k
+Out[31]:
+False
+In [34]:
+a = 20
+b = "20"
+a == b
+Out[34]:
+False
+In [ ]:
