@@ -1,0 +1,188 @@
+
+Lists
+lists are collection of different data types.
+mutable---> changable
+It allows duplicate values.
+In [1]:
+ls=['ece','cse','mec','civil']
+type(ls)
+Out[1]:
+list
+In [2]:
+ls[1]
+Out[2]:
+'cse'
+In [3]:
+ls[0:3]
+Out[3]:
+['ece', 'cse', 'mec']
+In [4]:
+ls[1:]
+Out[4]:
+['cse', 'mec', 'civil']
+In [6]:
+ls
+Out[6]:
+['ece', 'cse', 'mec', 'civil']
+In [8]:
+print(dir(list))
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+In [9]:
+ls.append("20")
+print(ls)
+['ece', 'cse', 'mec', 'civil', '20']
+In [10]:
+ls.append([1,2,3])
+print(ls)
+['ece', 'cse', 'mec', 'civil', '20', [1, 2, 3]]
+In [12]:
+ls.extend('2')
+print(ls)
+['ece', 'cse', 'mec', 'civil', '20', [1, 2, 3], '2']
+In [13]:
+ls.extend([4,5,6])
+print(ls)
+['ece', 'cse', 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5, 6]
+In [14]:
+ls[5]
+Out[14]:
+[1, 2, 3]
+In [15]:
+ls[5][1]
+Out[15]:
+2
+In [17]:
+ls.insert(2,10) # ls.insert(index,value)
+print(ls)
+['ece', 'cse', 10, 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5, 6]
+In [18]:
+ls.count(10)
+Out[18]:
+2
+In [19]:
+ls.pop()
+Out[19]:
+6
+In [20]:
+ls
+Out[20]:
+['ece', 'cse', 10, 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5]
+In [21]:
+ls.remove('ece')
+In [22]:
+ls
+Out[22]:
+['cse', 10, 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5]
+In [23]:
+ls.remove(10)
+In [24]:
+ls
+Out[24]:
+['cse', 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5]
+In [26]:
+ls.reverse()
+ls
+Out[26]:
+['cse', 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5]
+In [32]:
+s1=[1,2,3,4,7,5]
+s1.sort(reverse=True)
+s1
+Out[32]:
+[7, 5, 4, 3, 2, 1]
+In [33]:
+s1.sort(reverse=False)
+s1
+Out[33]:
+[1, 2, 3, 4, 5, 7]
+In [34]:
+s1.reverse()
+In [35]:
+s1
+Out[35]:
+[7, 5, 4, 3, 2, 1]
+In [36]:
+s1.clear()
+s1
+Out[36]:
+[]
+In [40]:
+del s1
+In [41]:
+s1
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-41-d0257f733e5e> in <module>
+----> 1 s1
+
+NameError: name 's1' is not defined
+In [42]:
+s2=ls.copy()
+s2
+Out[42]:
+['cse', 10, 'mec', 'civil', '20', [1, 2, 3], '2', 4, 5]
+In [43]:
+s2.index('civil')
+Out[43]:
+3
+In [45]:
+x1=[5,7,9]
+x2=x1
+x2
+Out[45]:
+[5, 7, 9]
+In [46]:
+x3=[4,6,8]
+x3=x1
+x3
+Out[46]:
+[5, 7, 9]
+In [47]:
+x2
+Out[47]:
+[5, 7, 9]
+In [51]:
+x4=[1,2,3]
+x=x2.copy()
+x
+Out[51]:
+[1, 2, 3]
+In [52]:
+# how to print a 1 to 10 values in list
+for i in range(10):
+    print(i)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+In [63]:
+lst=[x for x in range(10)]
+print(lst)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+In [59]:
+x1.extend('m')
+print(x1)
+[5, 7, 9, 's', 'a', 'n', 'a', 's', 'a', 'n', 'a', 's', 'a', 'n', 'a', 'm']
+In [60]:
+x2.extend('p')
+x2
+Out[60]:
+[1, 2, 3, 'p']
+In [61]:
+x2[0]="s"
+x2
+Out[61]:
+['s', 2, 3, 'p']
+In [64]:
+n=[]
+for i in range(10):
+    n.append(i)
+print(n)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+In [ ]:
