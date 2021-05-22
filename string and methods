@@ -1,0 +1,179 @@
+
+Strings
+string a group of characters
+declared by ' ' or " ".
+In [2]:
+s='apssdc'
+type(s)
+Out[2]:
+str
+In [3]:
+s[1]
+Out[3]:
+'p'
+In [4]:
+s[3:]
+Out[4]:
+'sdc'
+In [5]:
+for i in s:
+    print(i)
+a
+p
+s
+s
+d
+c
+In [6]:
+len(s)
+Out[6]:
+6
+In [12]:
+s[0:]
+Out[12]:
+'apssdc'
+In [14]:
+s[-3:]
+Out[14]:
+'sdc'
+In [16]:
+s[-4:-1]
+Out[16]:
+'ssd'
+In [18]:
+s1="hello python"
+print(s1[-5:-2])
+yth
+In [19]:
+s
+Out[19]:
+'apssdc'
+In [20]:
+s.upper()
+Out[20]:
+'APSSDC'
+In [21]:
+s.lower()
+Out[21]:
+'apssdc'
+In [22]:
+s.capitalize()
+Out[22]:
+'Apssdc'
+In [23]:
+x="welcome to python"
+x.title()
+Out[23]:
+'Welcome To Python'
+In [24]:
+x.strip()
+Out[24]:
+'welcome to python'
+In [25]:
+x1=' hai hello apssdc '
+x1.strip()
+Out[25]:
+'hai hello apssdc'
+In [26]:
+a="hello, world!"
+print(a.replace('h', 'H'))
+Hello, world!
+In [27]:
+a.split(',')
+Out[27]:
+['hello', ' world!']
+In [28]:
+s1="sana"
+s2="sudha"
+print(s1+s2)
+sanasudha
+In [29]:
+s1+" "+s2
+Out[29]:
+'sana sudha'
+In [30]:
+s1*3
+Out[30]:
+'sanasanasana'
+In [32]:
+x=10
+x1="my name is sana, and i am {}"
+print(x1.format(x))
+my name is sana, and i am 10
+In [33]:
+x1.count('o')
+Out[33]:
+0
+In [34]:
+x1
+Out[34]:
+'my name is sana, and i am {}'
+In [35]:
+x1.count('s')
+Out[35]:
+2
+In [40]:
+p="FYTfFdtdhgh"
+p.casefold()
+Out[40]:
+'fytffdtdhgh'
+In [37]:
+p.find('Y')
+Out[37]:
+1
+In [38]:
+p.index('F')
+Out[38]:
+0
+In [39]:
+p.index('f')
+Out[39]:
+3
+In [41]:
+p.rfind('F')
+Out[41]:
+4
+In [43]:
+p.find('F')
+Out[43]:
+0
+In [45]:
+s1="@@@"
+s2="sana"
+s1.join(s2)
+Out[45]:
+'s@@@a@@@n@@@a'
+In [49]:
+s2="sana sudha"
+print(s2[::-1])
+ahdus anas
+In [48]:
+s2[:-1]
+Out[48]:
+'sana sudh'
+In [50]:
+# syntax: string.isdigit()
+t="12345"
+type(t)
+Out[50]:
+str
+In [52]:
+x=t.isdigit()
+print(x)
+True
+In [53]:
+t1="python"
+x1=t1.isdigit()
+print(x1)
+False
+In [54]:
+n="dtdt55435"
+n1=n.isalnum()
+print(n1)
+True
+In [55]:
+m="apsdscDFGF"
+m1=m.isalpha()
+print(m1)
+True
+In [ ]:
