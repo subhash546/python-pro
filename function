@@ -1,0 +1,194 @@
+Function 
+A group of statements or a blcok of code which performs a specific task when it is called
+
+Types of functions
+Pre-Defined Functions
+print, input,type, int, float, str, range, list, tuple, set, dict, min, max, abs, sum, chr, ord
+User Defined Functions
+In [2]:
+s = "This is a string with few characters 56781"
+min(s)
+Out[2]:
+' '
+In [5]:
+chr(97)
+Out[5]:
+'a'
+In [6]:
+chr(32)
+Out[6]:
+' '
+In [7]:
+ord('T')
+Out[7]:
+84
+In [8]:
+ord(' ')
+Out[8]:
+32
+In [9]:
+ord('o')
+Out[9]:
+111
+In [11]:
+s = "string with characters and digits 0123 @("
+print(max(s))
+min(s)
+w
+Out[11]:
+' '
+In [12]:
+s1 = "0123abcde"
+min(s1)
+Out[12]:
+'0'
+In [14]:
+ord("0")
+Out[14]:
+48
+In [15]:
+s2 = 1234
+min(s2)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-15-acf0e437ee47> in <module>
+      1 s2 = 1234
+----> 2 min(s2)
+
+TypeError: 'int' object is not iterable
+In [16]:
+p = -987
+n = 567
+abs(p)
+Out[16]:
+987
+In [17]:
+abs(n)
+Out[17]:
+567
+In [18]:
+len("python Programming")
+Out[18]:
+18
+In [19]:
+K = [1,2,3,4,5]
+In [20]:
+sum(K)
+Out[20]:
+15
+In [22]:
+s = "Bhanu Prakash"
+print(max(s))
+min(s)
+u
+Out[22]:
+' '
+In [ ]:
+# function syntax
+def functionName(arguments):
+    statements
+    statements
+functionName(arguments)
+In [23]:
+def message(m):
+    print("from user:"+m)
+    
+m = input("enter a message")
+message(m)
+enter a messageoutside function
+from user:outside function
+In [24]:
+message(input("enter a mesage"))
+enter a mesagepython
+from user:python
+In [26]:
+def add(a,b):
+    return a+b
+    print("this statement doesnt print")
+
+add(int(input("enter a value")),int(input("enter b value")))
+enter a value2
+enter b value7
+Out[26]:
+9
+In [27]:
+def add(a,b):
+    c = a+b
+    print(c)
+    print("this will print")
+    
+add(5,6)
+11
+this will print
+Arguments types in Functions:
+Required arguments
+the number of arguments present in function call should exactly match with match function definition
+Keyword arguments
+when we use keyword arguments in a function call, the caller identifies the arguments by parameter name.
+Python intrepeter is able to use the keywords provided to match the values with parameter.
+Default arguments
+A default argument is an argument that assumes a default value if a value is not provided or mentioned in the function call for that arugument.
+Variable length arguments
+when we have a need to accept many values from the user for a argument then we use this varaiable length argument. An astriek(*) is placed before the argument name that holds all the values and returns in tuple.
+In [31]:
+# Required arguments
+def multiply(a,b,c):
+    return a*b*c
+
+multiply(int(input("enter a value")),int(input("enter b value")),int(input("enter c value")))
+enter a value3
+enter b value4
+enter c value1
+Out[31]:
+12
+In [33]:
+multiply(5,6,1)
+Out[33]:
+30
+In [34]:
+# keyword Arguments
+def student(rollno, name, branch):
+    print(rollno)
+    print(name)
+    print(branch)
+
+student(1,"python","cse")
+1
+python
+cse
+In [37]:
+student(name="abcde",branch="cse",rollno=123)
+123
+abcde
+cse
+In [43]:
+# Default Arguments
+def defaultArgs(h,a=12,b="string", c="float",d = 98.56):
+    print(a,b)
+    print(c,d)
+    print(h)
+In [44]:
+defaultArgs(4)
+12 string
+float 98.56
+4
+In [45]:
+defaultArgs(4,1,2)
+1 2
+float 98.56
+4
+In [46]:
+defaultArgs(23,1,2,3,4)
+1 2
+3 4
+23
+In [49]:
+def varargs(a,b,*c):
+    print(a,b)
+    print(c)
+    
+    
+varargs(1,2,3,34,8,6,5,4,3,"jik",98.7,5.7,5678)
+1 2
+(3, 34, 8, 6, 5, 4, 3, 'jik', 98.7, 5.7, 5678)
+In [ ]:
