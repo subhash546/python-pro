@@ -1,0 +1,265 @@
+Tuple
+In [1]:
+t1 = ("apple","banana","mango")
+type(t1)
+Out[1]:
+tuple
+In [2]:
+t1[1]
+Out[2]:
+'banana'
+In [3]:
+t1[1:]
+Out[3]:
+('banana', 'mango')
+In [4]:
+t1[-1]
+Out[4]:
+'mango'
+In [5]:
+len(t1)
+Out[5]:
+3
+In [6]:
+# immutable
+t1[0]="orange"
+t1
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-e99475aa1f81> in <module>
+      1 # immutable
+----> 2 t1[0]="orange"
+      3 t1
+
+TypeError: 'tuple' object does not support item assignment
+In [7]:
+# mutable
+ls=["apple",'banana','mango']
+ls[0]="orange"
+ls
+Out[7]:
+['orange', 'banana', 'mango']
+In [8]:
+t1
+Out[8]:
+('apple', 'banana', 'mango')
+In [9]:
+y=list(t1)
+y
+Out[9]:
+['apple', 'banana', 'mango']
+In [10]:
+y[1]="kiwi"
+y
+Out[10]:
+['apple', 'kiwi', 'mango']
+In [11]:
+x=tuple(y)
+x
+Out[11]:
+('apple', 'kiwi', 'mango')
+In [12]:
+y.remove("apple")
+y
+Out[12]:
+['kiwi', 'mango']
+In [14]:
+#x.remove("apple")
+x1=list(x)
+x1.remove("apple")
+x1
+Out[14]:
+['kiwi', 'mango']
+In [15]:
+del x1
+In [16]:
+del x
+In [17]:
+x
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-17-6fcf9dfbd479> in <module>
+----> 1 x
+
+NameError: name 'x' is not defined
+In [19]:
+print(dir(tuple))
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+In [21]:
+t1
+Out[21]:
+('apple', 'banana', 'mango')
+In [23]:
+t1.count('banana')
+Out[23]:
+1
+In [24]:
+t1.index("mango")
+Out[24]:
+2
+In [25]:
+t1.reverse()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-25-4bde365dd097> in <module>
+----> 1 t1.reverse()
+
+AttributeError: 'tuple' object has no attribute 'reverse'
+In [27]:
+t1[::-1]
+Out[27]:
+('mango', 'banana', 'apple')
+In [28]:
+for i in range(len(t1)):
+    print(t1[i])
+apple
+banana
+mango
+In [29]:
+i=0
+while i<len(t1):
+    print(t1[i])
+    i=i+1
+apple
+banana
+mango
+Sets
+In [31]:
+s1={'rose','lilly','lotus','jasmin','rose'}
+s1
+Out[31]:
+{'jasmin', 'lilly', 'lotus', 'rose'}
+In [32]:
+t1
+Out[32]:
+('apple', 'banana', 'mango')
+In [33]:
+s2=set(t1)
+s2
+Out[33]:
+{'apple', 'banana', 'mango'}
+In [37]:
+for x in s1:
+    print(x)
+rose
+jasmin
+lilly
+lotus
+In [38]:
+s1[0]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-38-bfed54b371ac> in <module>
+----> 1 s1[0]
+
+TypeError: 'set' object is not subscriptable
+In [41]:
+s1.add("hibiscus")
+print(s1)
+{'rose', 'hibiscuss', 'lilly', 'lotus', 'jasmin', 'hibiscus'}
+In [43]:
+s1.update("pineapples")
+print(s1)
+{'rose', 'hibiscuss', 'p', 'l', 'i', 'e', 'lilly', 'a', 'lotus', 'jasmin', 'hibiscus', 'n'}
+In [50]:
+s1.remove("lilly")
+s1
+Out[50]:
+{'a', 'e', 'hibiscus', 'hibiscuss', 'i', 'jasmin', 'l', 'lotus', 'n', 'p'}
+In [51]:
+s1.discard("hibiscuss")
+s1
+Out[51]:
+{'a', 'e', 'hibiscus', 'i', 'jasmin', 'l', 'lotus', 'n', 'p'}
+In [52]:
+p=s1.pop()
+p
+Out[52]:
+'p'
+In [54]:
+s1
+Out[54]:
+{'a', 'e', 'hibiscus', 'i', 'jasmin', 'l', 'lotus', 'n'}
+In [55]:
+s1.clear()
+In [56]:
+s1
+Out[56]:
+set()
+In [57]:
+del s1
+In [8]:
+set1={'a','b','c'}
+set2={1,2,3}
+set3=set1.union(set2)
+set3
+Out[8]:
+{1, 2, 3, 'a', 'b', 'c'}
+In [9]:
+set4=set1.intersection(set2)
+set4
+Out[9]:
+set()
+In [10]:
+set1.intersection_update(set2)
+set1
+Out[10]:
+set()
+In [60]:
+z=set1.symmetric_difference(set2)
+z
+Out[60]:
+{1, 2, 3, 'a', 'b', 'c'}
+In [ ]:
+
+In [2]:
+st1={'apple','orange','mango'}
+st2={'ece','cse','apple'}
+In [4]:
+st1.symmetric_difference_update(st2)
+print(st1)
+{'apple', 'orange', 'mango'}
+In [12]:
+print(dir(set))
+['__and__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+In [20]:
+n1=st1.isdisjoint(st2)
+n1
+Out[20]:
+False
+In [22]:
+m1=st1.issuperset(st2)
+m1
+Out[22]:
+False
+In [27]:
+x1={1,2,3,4,5}
+x2={4,5}
+x=x1.issuperset(x2)
+x
+Out[27]:
+True
+In [34]:
+p1={1,2,3}
+p2={4,5,1,2,3}
+p=p1.issubset(p2)
+p
+Out[34]:
+True
+In [17]:
+print(set1)
+print(set2)
+set()
+{1, 2, 3}
+In [28]:
+set1
+Out[28]:
+set()
+In [39]:
+fruits={"mango",'apple','orange'}
+if 'goa' in fruits:
+    print('yes, apple is a fruit!')
+else:
+    print("no is not a fruit")
+no is not a fruit
+In [ ]:
